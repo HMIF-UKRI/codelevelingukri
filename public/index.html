@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Website portofolio workshop dengan chatbot AI berbasis Gemini."
+    />
+    <title>Portfolio Workshop | Gemini AI Chatbot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Sora:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Kembali ke beranda">
+        <span class="brand-mark">W</span>
+        <span>Workshopfolio</span>
+      </a>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#about">Profil</a>
+        <a href="#projects">Project</a>
+        <a href="#schedule">Workshop</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Kolaborasi</a>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Portfolio pribadi untuk workshop digital</p>
+          <h1>
+            Halo, saya
+            <span class="accent-text">Nama Kamu</span>
+            <br />
+            kreator web yang membangun pengalaman belajar interaktif.
+          </h1>
+          <p class="hero-description">
+            Website ini dirancang untuk memperkenalkan profil, skill, project,
+            dan materi workshop dengan tampilan modern plus chatbot Gemini AI
+            yang siap menjawab pertanyaan pengunjung.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">Lihat Project</a>
+            <button class="button secondary" type="button" data-open-chat>
+              Tanya Chatbot AI
+            </button>
+          </div>
+          <div class="metric-strip" aria-label="Ringkasan pencapaian">
+            <div>
+              <strong>12+</strong>
+              <span>Project demo</span>
+            </div>
+            <div>
+              <strong>4</strong>
+              <span>Topik workshop</span>
+            </div>
+            <div>
+              <strong>AI</strong>
+              <span>Gemini chatbot</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1" aria-label="Kartu profil">
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+          <article class="profile-card">
+            <div class="profile-top">
+              <div class="avatar" aria-hidden="true">NK</div>
+              <div>
+                <p class="muted">Available for</p>
+                <h2>Workshop Web & AI</h2>
+              </div>
+            </div>
+            <div class="code-window">
+              <div class="dots"><span></span><span></span><span></span></div>
+              <pre><code>const fokus = [
+  "Express.js",
+  "UI Portofolio",
+  "Gemini AI",
+  "Deploy Vercel"
+];</code></pre>
+            </div>
+            <div class="floating-note">
+              <span>Live demo ready</span>
+              <strong>Vercel</strong>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section" id="about">
+        <div class="section-label reveal">Profil</div>
+        <div class="section-content reveal delay-1">
+          <h2>Profil yang tajam, mudah dipahami, dan siap dipresentasikan.</h2>
+          <p>
+            Saya berfokus pada pembuatan website cepat, rapi, dan komunikatif
+            untuk kebutuhan edukasi, personal branding, dan demo teknologi.
+            Portofolio ini bisa kamu edit sesuai nama, foto, pengalaman, dan
+            kontak asli.
+          </p>
+          <div class="skill-grid">
+            <article>
+              <span>01</span>
+              <h3>Frontend Experience</h3>
+              <p>Landing page responsif dengan visual kuat, animasi halus, dan struktur konten jelas.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Backend Express</h3>
+              <p>Endpoint server-side untuk menyimpan API key Gemini tetap aman di environment.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>AI Integration</h3>
+              <p>Chatbot kontekstual yang membantu pengunjung mengenal profil dan materi workshop.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projects">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2>Project yang cocok untuk materi workshop.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-number">01</div>
+            <h3>Landing Page UMKM</h3>
+            <p>
+              Website promosi produk lokal dengan CTA kuat, katalog ringkas, dan
+              struktur SEO dasar.
+            </p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>UX</span></div>
+          </article>
+          <article class="project-card tall reveal delay-1">
+            <div class="project-number">02</div>
+            <h3>AI Portfolio Assistant</h3>
+            <p>
+              Chatbot berbasis Gemini yang menjawab pertanyaan pengunjung tanpa
+              mengekspos API key ke client.
+            </p>
+            <div class="tags"><span>Gemini</span><span>Express</span><span>API</span></div>
+          </article>
+          <article class="project-card reveal delay-2">
+            <div class="project-number">03</div>
+            <h3>Dashboard Registrasi</h3>
+            <p>
+              Simulasi dashboard untuk data peserta workshop, jadwal, dan status
+              kehadiran.
+            </p>
+            <div class="tags"><span>Node</span><span>Vercel</span><span>Data</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section workshop-band" id="schedule">
+        <div class="reveal">
+          <p class="eyebrow">Workshop Flow</p>
+          <h2>Dari konsep sampai deploy dalam satu alur belajar.</h2>
+        </div>
+        <div class="timeline reveal delay-1">
+          <div>
+            <span>09.00</span>
+            <strong>Kickoff & UI Direction</strong>
+            <p>Menentukan target profil, struktur konten, dan gaya visual.</p>
+          </div>
+          <div>
+            <span>10.30</span>
+            <strong>Build Express App</strong>
+            <p>Membuat server, static files, dan endpoint chatbot.</p>
+          </div>
+          <div>
+            <span>13.00</span>
+            <strong>Integrasi Gemini</strong>
+            <p>Menghubungkan API key, prompt sistem, dan UI chat.</p>
+          </div>
+          <div>
+            <span>15.00</span>
+            <strong>Deploy Vercel</strong>
+            <p>Setup environment variable dan publish website.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-card reveal">
+          <p class="eyebrow">Kontak</p>
+          <h2>Siap dipakai untuk demo workshop dan personal branding.</h2>
+          <p>
+            Ganti informasi di bawah ini dengan data asli sebelum presentasi:
+            email, LinkedIn, GitHub, dan nama brand workshop kamu.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:emailkamu@example.com">emailkamu@example.com</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="chatbot" aria-label="Chatbot Gemini AI">
+      <button class="chat-toggle" type="button" data-chat-toggle aria-expanded="false">
+        <span>AI</span>
+        <strong>Chat</strong>
+      </button>
+      <div class="chat-panel" data-chat-panel aria-hidden="true">
+        <div class="chat-header">
+          <div>
+            <p>Gemini Assistant</p>
+            <span>Online untuk bantu profil workshop</span>
+          </div>
+          <button type="button" data-chat-close aria-label="Tutup chatbot">x</button>
+        </div>
+        <div class="chat-messages" data-chat-messages>
+          <div class="message bot">
+            Halo. Saya bisa bantu menjelaskan profil, project, alur workshop,
+            atau cara deploy website ini ke Vercel.
+          </div>
+        </div>
+        <form class="chat-form" data-chat-form>
+          <input
+            type="text"
+            name="message"
+            autocomplete="off"
+            placeholder="Tulis pertanyaan..."
+            aria-label="Pesan untuk chatbot"
+            required
+          />
+          <button type="submit">Kirim</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
