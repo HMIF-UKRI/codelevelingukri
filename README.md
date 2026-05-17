@@ -6,8 +6,10 @@ Template website portofolio untuk peserta workshop. Peserta bisa mengganti nama,
 
 ```bash
 npm install
-copy .env.example .env
-npm run dev
+copy isi .env.example
+buat file baru .env
+lalu pastekan kedalam .env isi dari .env.example
+setelah itu npm run dev untuk menjalankan website localhost
 ```
 
 Isi `.env`:
