@@ -1,13 +1,15 @@
 {
   "name": "workshop-portfolio-gemini-chatbot",
   "version": "1.0.0",
-  "description": "Website portofolio workshop dengan Express.js, Vercel, dan chatbot Gemini AI.",
+  "description": "Contoh website bertema UKRI untuk pembelajaran workshop dengan Express.js dan chatbot Gemini AI.",
   "main": "index.js",
   "scripts": {
     "dev": "node index.js",
     "start": "node index.js"
   },
   "keywords": [
+    "workshop",
+    "seminar",
     "portfolio",
     "express",
     "vercel",

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Website portofolio workshop dengan chatbot AI berbasis Gemini."
+      content="Contoh website bertema UKRI untuk bahan pembelajaran workshop."
     />
-    <title>Portfolio Workshop | Gemini AI Chatbot</title>
+    <title>UKRI Workshop Template | Universitas Kebangsaan Republik Indonesia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,199 +17,222 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div class="noise"></div>
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Kembali ke beranda">
-        <span class="brand-mark">W</span>
-        <span>Workshopfolio</span>
+        <img src="/ukri-logo.png" alt="" />
+        <span>UKRI Workshop</span>
       </a>
       <nav class="nav-links" aria-label="Navigasi utama">
-        <a href="#about">Profil</a>
-        <a href="#projects">Project</a>
-        <a href="#schedule">Workshop</a>
-        <a href="#contact">Kontak</a>
+        <a href="#profil">Profil</a>
+        <a href="#fakultas">Fakultas</a>
+        <a href="#riset">Riset</a>
+        <a href="#kontak">Kontak</a>
       </nav>
-      <a class="nav-cta" href="#contact">Kolaborasi</a>
+      <button class="nav-cta" type="button" data-open-chat>Tanya AI</button>
     </header>
 
     <main>
       <section class="hero section" id="home">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Portfolio pribadi untuk workshop digital</p>
+          <p class="eyebrow">Tema UKRI untuk pembelajaran workshop</p>
           <h1>
-            Halo, saya
-            <span class="accent-text">Nama Kamu</span>
-            <br />
-            kreator web yang membangun pengalaman belajar interaktif.
+            Universitas Kebangsaan
+            <span class="accent-text">Republik Indonesia</span>
           </h1>
           <p class="hero-description">
-            Website ini dirancang untuk memperkenalkan profil, skill, project,
-            dan materi workshop dengan tampilan modern plus chatbot Gemini AI
-            yang siap menjawab pertanyaan pengunjung.
+            Website ini menampilkan contoh halaman bertema UKRI dengan informasi
+            profil kampus, fakultas, publikasi, dan kontak. Desainnya dibuat
+            sederhana agar mudah dipakai sebagai bahan praktik pada acara
+            workshop.
+          </p>
+          <p class="workshop-note">
+            Disclaimer: website ini hanya contoh untuk kebutuhan pembelajaran
+            workshop dan bukan website resmi Universitas Kebangsaan Republik
+            Indonesia.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#projects">Lihat Project</a>
-            <button class="button secondary" type="button" data-open-chat>
-              Tanya Chatbot AI
-            </button>
+            <a class="button primary" href="#profil">Lihat Profil</a>
+            <a class="button secondary" href="#fakultas">Lihat Fakultas</a>
           </div>
-          <div class="metric-strip" aria-label="Ringkasan pencapaian">
+          <div class="metric-strip" aria-label="Ringkasan tema UKRI">
             <div>
-              <strong>12+</strong>
-              <span>Project demo</span>
+              <strong>1985</strong>
+              <span>Akar sejarah kampus</span>
             </div>
             <div>
-              <strong>4</strong>
-              <span>Topik workshop</span>
+              <strong>6</strong>
+              <span>Fakultas sebagai contoh konten</span>
             </div>
             <div>
-              <strong>AI</strong>
-              <span>Gemini chatbot</span>
+              <strong>Bandung</strong>
+              <span>Lokasi kampus rujukan</span>
+            </div>
+            <div>
+              <strong>e-Journal</strong>
+              <span>Contoh portal publikasi</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual reveal delay-1" aria-label="Kartu profil">
-          <div class="orb orb-one"></div>
-          <div class="orb orb-two"></div>
-          <article class="profile-card">
-            <div class="profile-top">
-              <div class="avatar" aria-hidden="true">NK</div>
-              <div>
-                <p class="muted">Available for</p>
-                <h2>Workshop Web & AI</h2>
-              </div>
+        <div class="campus-visual reveal delay-1" aria-label="Visual bertema UKRI">
+          <img
+            class="campus-image"
+            src="/ukri-journal-header.png"
+            alt="Visual referensi Universitas Kebangsaan Republik Indonesia"
+          />
+          <div class="identity-panel">
+            <img src="/ukri-logo.png" alt="" />
+            <div>
+              <p>Bahan pembelajaran</p>
+              <h2>Website Tema UKRI</h2>
             </div>
-            <div class="code-window">
-              <div class="dots"><span></span><span></span><span></span></div>
-              <pre><code>const fokus = [
-  "Express.js",
-  "UI Portofolio",
-  "Gemini AI",
-  "Deploy Vercel"
-];</code></pre>
-            </div>
-            <div class="floating-note">
-              <span>Live demo ready</span>
-              <strong>Vercel</strong>
-            </div>
-          </article>
+          </div>
+          <div class="location-panel">
+            <span>Catatan</span>
+            <strong>Contoh tampilan untuk praktik workshop, bukan situs resmi</strong>
+          </div>
         </div>
       </section>
 
-      <section class="section split-section" id="about">
+      <section class="section split-section" id="profil">
         <div class="section-label reveal">Profil</div>
         <div class="section-content reveal delay-1">
-          <h2>Profil yang tajam, mudah dipahami, dan siap dipresentasikan.</h2>
+          <h2>Contoh susunan profil kampus dengan gaya visual UKRI.</h2>
           <p>
-            Saya berfokus pada pembuatan website cepat, rapi, dan komunikatif
-            untuk kebutuhan edukasi, personal branding, dan demo teknologi.
-            Portofolio ini bisa kamu edit sesuai nama, foto, pengalaman, dan
-            kontak asli.
+            UKRI dikenal sebagai perguruan tinggi di Bandung, Jawa Barat.
+            Halaman ini memakai informasi ringkas tentang sejarah, visi
+            akademik, dan aktivitas kampus sebagai contoh konten untuk latihan
+            membuat website informatif.
           </p>
-          <div class="skill-grid">
+          <div class="info-grid">
             <article>
               <span>01</span>
-              <h3>Frontend Experience</h3>
-              <p>Landing page responsif dengan visual kuat, animasi halus, dan struktur konten jelas.</p>
+              <h3>Sejarah Singkat</h3>
+              <p>Contoh konten sejarah menampilkan akar pengembangan kampus dan identitas kebangsaan.</p>
             </article>
             <article>
               <span>02</span>
-              <h3>Backend Express</h3>
-              <p>Endpoint server-side untuk menyimpan API key Gemini tetap aman di environment.</p>
+              <h3>Visi Akademik</h3>
+              <p>Bagian ini menunjukkan cara menyusun informasi visi, misi, dan arah pengembangan kampus.</p>
             </article>
             <article>
               <span>03</span>
-              <h3>AI Integration</h3>
-              <p>Chatbot kontekstual yang membantu pengunjung mengenal profil dan materi workshop.</p>
+              <h3>Kegiatan Kampus</h3>
+              <p>Peserta dapat melihat pola penyajian informasi riset, publikasi, dan pengabdian masyarakat.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section projects-section" id="projects">
+      <section class="section demo-section" id="fakultas">
         <div class="section-heading reveal">
-          <p class="eyebrow">Selected work</p>
-          <h2>Project yang cocok untuk materi workshop.</h2>
-        </div>
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-number">01</div>
-            <h3>Landing Page UMKM</h3>
-            <p>
-              Website promosi produk lokal dengan CTA kuat, katalog ringkas, dan
-              struktur SEO dasar.
-            </p>
-            <div class="tags"><span>HTML</span><span>CSS</span><span>UX</span></div>
-          </article>
-          <article class="project-card tall reveal delay-1">
-            <div class="project-number">02</div>
-            <h3>AI Portfolio Assistant</h3>
-            <p>
-              Chatbot berbasis Gemini yang menjawab pertanyaan pengunjung tanpa
-              mengekspos API key ke client.
-            </p>
-            <div class="tags"><span>Gemini</span><span>Express</span><span>API</span></div>
-          </article>
-          <article class="project-card reveal delay-2">
-            <div class="project-number">03</div>
-            <h3>Dashboard Registrasi</h3>
-            <p>
-              Simulasi dashboard untuk data peserta workshop, jadwal, dan status
-              kehadiran.
-            </p>
-            <div class="tags"><span>Node</span><span>Vercel</span><span>Data</span></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section workshop-band" id="schedule">
-        <div class="reveal">
-          <p class="eyebrow">Workshop Flow</p>
-          <h2>Dari konsep sampai deploy dalam satu alur belajar.</h2>
-        </div>
-        <div class="timeline reveal delay-1">
-          <div>
-            <span>09.00</span>
-            <strong>Kickoff & UI Direction</strong>
-            <p>Menentukan target profil, struktur konten, dan gaya visual.</p>
-          </div>
-          <div>
-            <span>10.30</span>
-            <strong>Build Express App</strong>
-            <p>Membuat server, static files, dan endpoint chatbot.</p>
-          </div>
-          <div>
-            <span>13.00</span>
-            <strong>Integrasi Gemini</strong>
-            <p>Menghubungkan API key, prompt sistem, dan UI chat.</p>
-          </div>
-          <div>
-            <span>15.00</span>
-            <strong>Deploy Vercel</strong>
-            <p>Setup environment variable dan publish website.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="contact-card reveal">
-          <p class="eyebrow">Kontak</p>
-          <h2>Siap dipakai untuk demo workshop dan personal branding.</h2>
+          <p class="eyebrow">Fakultas</p>
+          <h2>Contoh kartu fakultas untuk halaman bertema UKRI.</h2>
           <p>
-            Ganti informasi di bawah ini dengan data asli sebelum presentasi:
-            email, LinkedIn, GitHub, dan nama brand workshop kamu.
+            Daftar ini dipakai sebagai contoh struktur konten agar peserta
+            workshop memahami cara menampilkan informasi kampus secara rapi.
+          </p>
+        </div>
+        <div class="profile-grid">
+          <article class="profile-card reveal">
+            <span>FTI</span>
+            <h3>Fakultas Teknologi Industri</h3>
+            <p>Contoh bidang teknik industri, mesin, elektro, dan teknologi terapan.</p>
+          </article>
+          <article class="profile-card highlight reveal delay-1">
+            <span>FIKSI</span>
+            <h3>Fakultas Ilmu Komputer dan Sistem Informasi</h3>
+            <p>Contoh bidang informatika, sistem informasi, data, dan teknologi digital.</p>
+          </article>
+          <article class="profile-card reveal delay-2">
+            <span>FTSP</span>
+            <h3>Fakultas Teknik Sipil dan Perencanaan</h3>
+            <p>Contoh bidang arsitektur, sipil, perencanaan, dan lingkungan binaan.</p>
+          </article>
+          <article class="profile-card reveal">
+            <span>FISS</span>
+            <h3>Fakultas Ilmu Sosial dan Sastra</h3>
+            <p>Contoh bidang komunikasi, sastra, bahasa, dan kajian sosial-humaniora.</p>
+          </article>
+          <article class="profile-card reveal delay-1">
+            <span>FE</span>
+            <h3>Fakultas Ekonomi</h3>
+            <p>Contoh bidang manajemen, bisnis, akuntansi, dan pengembangan ekonomi.</p>
+          </article>
+          <article class="profile-card reveal delay-2">
+            <span>FMIPA</span>
+            <h3>Fakultas Matematika dan Ilmu Pengetahuan Alam</h3>
+            <p>Contoh bidang matematika, fisika, dan ilmu dasar pendukung.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section deploy-band" id="riset">
+        <div class="reveal">
+          <p class="eyebrow">Riset & Publikasi</p>
+          <h2>Bagian publikasi menjadi contoh konten pendukung website kampus.</h2>
+          <p>
+            Portal e-Journal UKRI dapat dijadikan contoh sumber publikasi ilmiah.
+            Pada workshop, bagian ini menunjukkan cara menautkan sumber rujukan
+            dan menyajikan informasi pendukung secara singkat.
+          </p>
+        </div>
+        <div class="deploy-list reveal delay-1">
+          <div>
+            <span>01</span>
+            <strong>e-Journal UKRI</strong>
+            <p>Contoh tautan publikasi ilmiah dan jurnal kampus.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Kajian Kampus</strong>
+            <p>Contoh konten riset tentang lingkungan, aksesibilitas, dan tata kelola kampus.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Pengabdian Masyarakat</strong>
+            <p>Contoh penyajian aktivitas kampus yang berdampak pada masyarakat.</p>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>Sumber Resmi</strong>
+            <p>Peserta diarahkan tetap mengecek situs resmi untuk informasi terbaru.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section checklist-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Catatan penggunaan</p>
+          <h2>Halaman ini dipakai sebagai bahan belajar pada sesi workshop.</h2>
+        </div>
+        <div class="checklist reveal delay-1">
+          <div>Website ini bukan kanal resmi UKRI.</div>
+          <div>Konten dibuat sebagai contoh struktur halaman kampus.</div>
+          <div>Peserta boleh mengganti teks, gambar, warna, dan bagian konten.</div>
+          <div>Informasi resmi tetap merujuk ke website UKRI.</div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="kontak">
+        <div class="contact-card reveal">
+          <p class="eyebrow">Kontak & referensi</p>
+          <h2>Contoh area kontak untuk website bertema UKRI.</h2>
+          <p>
+            Bagian ini dapat dipakai untuk menampilkan tautan website resmi,
+            portal e-Journal, atau kontak panitia workshop. Ubah sesuai kebutuhan
+            acara dan materi pembelajaran.
           </p>
           <div class="contact-links">
-            <a href="mailto:emailkamu@example.com">emailkamu@example.com</a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://ukri.ac.id/" target="_blank" rel="noreferrer">Website UKRI</a>
+            <a href="https://e-journal.ukri.ac.id/" target="_blank" rel="noreferrer">e-Journal UKRI</a>
+            <a href="mailto:workshop@example.com">workshop@example.com</a>
           </div>
         </div>
       </section>
     </main>
 
-    <section class="chatbot" aria-label="Chatbot Gemini AI">
+    <section class="chatbot" aria-label="Chatbot pembelajaran">
       <button class="chat-toggle" type="button" data-chat-toggle aria-expanded="false">
         <span>AI</span>
         <strong>Chat</strong>
@@ -217,15 +240,16 @@
       <div class="chat-panel" data-chat-panel aria-hidden="true">
         <div class="chat-header">
           <div>
-            <p>Gemini Assistant</p>
-            <span>Online untuk bantu profil workshop</span>
+            <p>Asisten Workshop</p>
+            <span>Membantu menjelaskan contoh website bertema UKRI</span>
           </div>
           <button type="button" data-chat-close aria-label="Tutup chatbot">x</button>
         </div>
         <div class="chat-messages" data-chat-messages>
           <div class="message bot">
-            Halo. Saya bisa bantu menjelaskan profil, project, alur workshop,
-            atau cara deploy website ini ke Vercel.
+            Halo. Saya bisa bantu menjelaskan bagian profil, fakultas, riset,
+            kontak, serta disclaimer bahwa website ini hanya bahan pembelajaran
+            workshop dan bukan website resmi UKRI.
           </div>
         </div>
         <form class="chat-form" data-chat-form>
@@ -233,7 +257,7 @@
             type="text"
             name="message"
             autocomplete="off"
-            placeholder="Tulis pertanyaan..."
+            placeholder="Tanya tentang contoh website UKRI..."
             aria-label="Pesan untuk chatbot"
             required
           />

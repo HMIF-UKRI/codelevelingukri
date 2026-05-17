@@ -1,6 +1,6 @@
-# Workshop Portfolio + Gemini Chatbot
+# UKRI Workshop Template + Gemini Chatbot
 
-Website portofolio untuk kebutuhan workshop, dibuat dengan Express.js dan siap deploy ke Vercel. Chatbot berjalan lewat endpoint server-side agar `GEMINI_API_KEY` tidak pernah dikirim ke browser.
+Contoh website bertema Universitas Kebangsaan Republik Indonesia untuk bahan pembelajaran workshop. Website ini bukan situs resmi UKRI; konten dan tampilannya dipakai sebagai contoh latihan menyusun halaman profil kampus sederhana.
 
 ## Jalankan Lokal
 
@@ -16,33 +16,22 @@ Isi `.env`:
 GEMINI_API_KEY=api_key_gemini_kamu
 GEMINI_MODEL=gemini-2.5-flash
 PORT=3000
+PORT_RANGE=50
 ```
 
-Buka `http://localhost:3000`.
+Buka alamat yang muncul di terminal, misalnya `http://localhost:3000`.
 
-## Deploy ke Vercel
+## Catatan Workshop
 
-1. Push project ini ke GitHub.
-2. Import repository di Vercel.
-3. Vercel akan mendeteksi Express dari `index.js`.
-4. Buka Project Settings > Environment Variables.
-5. Tambahkan `GEMINI_API_KEY` dengan API key Gemini kamu.
-6. Tambahkan opsional `GEMINI_MODEL=gemini-2.5-flash`.
-7. Deploy ulang project.
+- Website ini hanya bahan pembelajaran.
+- Website ini bukan website resmi UKRI.
+- Peserta boleh mengganti teks, gambar, warna, section, dan link sesuai kebutuhan workshop.
+- API key Gemini tetap dipakai di server lewat `.env`, bukan di frontend.
 
 ## File Penting
 
-- `index.js`: server Express dan endpoint `/api/chat`.
-- `public/index.html`: konten portofolio.
-- `public/styles.css`: desain visual responsive.
+- `index.js`: server Express, endpoint `/api/chat`, dan fallback port otomatis.
+- `public/index.html`: konten contoh website bertema UKRI.
+- `public/styles.css`: tampilan responsif dengan palet merah, hijau, dan emas.
 - `public/script.js`: interaksi chatbot dan animasi.
-
-## Kustomisasi Cepat
-
-Ganti teks berikut sebelum workshop:
-
-- `Nama Kamu`
-- Initial avatar `NK`
-- Email `emailkamu@example.com`
-- Link LinkedIn dan GitHub
-- Project dan jadwal workshop
+- `.env.example`: contoh konfigurasi environment.

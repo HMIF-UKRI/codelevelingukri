@@ -29,7 +29,7 @@ function addMessage(text, role, extraClass = "") {
 }
 
 async function sendMessage(text, previousHistory) {
-  const loadingMessage = addMessage("Gemini sedang menyusun jawaban...", "bot", "loading");
+  const loadingMessage = addMessage("Asisten workshop sedang menyusun jawaban...", "bot", "loading");
 
   try {
     const response = await fetch("/api/chat", {
