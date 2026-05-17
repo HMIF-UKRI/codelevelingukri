@@ -5,11 +5,17 @@ Template website portofolio untuk peserta workshop. Peserta bisa mengganti nama,
 ## Jalankan Lokal
 
 ```bash
-npm install
-copy .env.example .env
-npm run dev
+pastikan kalian berada di dalam folder codelevelingukri ketika di vscode
+ketik di terminal vscode npm install
+copy isi .env.example
+buat file baru .env
+lalu pastekan kedalam .env isi dari .env.example
+setelah itu npm run dev untuk menjalankan website localhost
 ```
-
+## Cara membuat api key gemini AI
+```
+https://youtu.be/AHkR-incMMs
+```
 Isi `.env`:
 
 ```env
