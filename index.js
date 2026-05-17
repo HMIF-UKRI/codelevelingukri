@@ -27,12 +27,11 @@ app.use(
 );
 
 const workshopContext = [
-  "Website ini adalah contoh halaman bertema Universitas Kebangsaan Republik Indonesia (UKRI) untuk bahan pembelajaran workshop.",
-  "Website ini bukan situs resmi UKRI dan tidak dimaksudkan sebagai kanal informasi resmi kampus.",
-  "Konten halaman menampilkan contoh profil kampus, fakultas, riset dan publikasi, kontak, serta referensi visual UKRI.",
-  "Fakultas yang ditampilkan sebagai contoh konten: Fakultas Teknologi Industri, Fakultas Ilmu Komputer dan Sistem Informasi, Fakultas Teknik Sipil dan Perencanaan, Fakultas Ilmu Sosial dan Sastra, Fakultas Ekonomi, serta Fakultas Matematika dan Ilmu Pengetahuan Alam.",
-  "Portal e-Journal UKRI berada di https://e-journal.ukri.ac.id/ dan situs utama UKRI berada di https://ukri.ac.id/.",
-  "Tampilan memakai inspirasi warna merah, hijau, dan emas seperti identitas visual UKRI. Semua informasi pada halaman ini dipakai sebagai contoh untuk kebutuhan pembelajaran workshop."
+  "Website ini adalah template portofolio peserta workshop.",
+  "Konten dapat diedit oleh peserta untuk mengganti nama, inisial avatar, asal sekolah atau kampus, jurusan atau program studi, minat belajar, skill, project, email, GitHub, LinkedIn, dan link demo.",
+  "Bagian utama halaman: hero perkenalan, profil peserta, skill, project, checklist bagian yang bisa diedit, kontak, dan chatbot.",
+  "Contoh placeholder yang perlu diganti: Nama Peserta, Nama Sekolah atau Kampus, Jurusan Peserta, emailpeserta@example.com, link GitHub, dan link LinkedIn.",
+  "Chatbot membantu peserta memahami cara mengedit konten portofolio dan menjelaskan bagian-bagian halaman secara ringkas."
 ].join(" ");
 
 function parsePort(value, fallback) {
@@ -101,7 +100,7 @@ app.post("/api/chat", async (req, res) => {
           systemInstruction: {
             parts: [
               {
-                text: `Kamu adalah asisten pembelajaran pada contoh website bertema UKRI untuk kebutuhan workshop. Jawab dalam Bahasa Indonesia yang ringkas, praktis, dan mudah diikuti peserta. Gunakan konteks berikut sebagai dasar jawaban: ${workshopContext} Jika pengguna bertanya di luar konteks halaman, jawab seperlunya lalu arahkan kembali ke profil, fakultas, riset, publikasi, kontak, atau disclaimer pembelajaran. Jangan mengklaim website ini sebagai situs resmi UKRI.`
+                text: `Kamu adalah asisten pembelajaran pada template website portofolio peserta. Jawab dalam Bahasa Indonesia yang ringkas, praktis, dan mudah diikuti peserta. Gunakan konteks berikut sebagai dasar jawaban: ${workshopContext} Jika pengguna bertanya di luar konteks halaman, jawab seperlunya lalu arahkan kembali ke cara mengedit profil, asal sekolah/kampus, jurusan, skill, project, kontak, atau deploy portofolio.`
               }
             ]
           },

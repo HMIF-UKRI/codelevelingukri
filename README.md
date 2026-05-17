@@ -1,6 +1,6 @@
-# UKRI Workshop Template + Gemini Chatbot
+# Portfolio Peserta + Gemini Chatbot
 
-Contoh website bertema Universitas Kebangsaan Republik Indonesia untuk bahan pembelajaran workshop. Website ini bukan situs resmi UKRI; konten dan tampilannya dipakai sebagai contoh latihan menyusun halaman profil kampus sederhana.
+Template website portofolio untuk peserta workshop. Peserta bisa mengganti nama, asal sekolah/kampus, jurusan, skill, project, dan kontak sebelum deploy.
 
 ## Jalankan Lokal
 
@@ -21,17 +21,21 @@ PORT_RANGE=50
 
 Buka alamat yang muncul di terminal, misalnya `http://localhost:3000`.
 
-## Catatan Workshop
+## Bagian Yang Perlu Diedit Peserta
 
-- Website ini hanya bahan pembelajaran.
-- Website ini bukan website resmi UKRI.
-- Peserta boleh mengganti teks, gambar, warna, section, dan link sesuai kebutuhan workshop.
-- API key Gemini tetap dipakai di server lewat `.env`, bukan di frontend.
+- `Nama Peserta`
+- `NP` sebagai inisial avatar
+- `Nama Sekolah atau Kampus`
+- `Jurusan Peserta`
+- daftar skill
+- daftar project
+- `emailpeserta@example.com`
+- link GitHub, LinkedIn, atau demo project
 
 ## File Penting
 
 - `index.js`: server Express, endpoint `/api/chat`, dan fallback port otomatis.
-- `public/index.html`: konten contoh website bertema UKRI.
-- `public/styles.css`: tampilan responsif dengan palet merah, hijau, dan emas.
+- `public/index.html`: konten portofolio peserta.
+- `public/styles.css`: tampilan responsif portofolio.
 - `public/script.js`: interaksi chatbot dan animasi.
 - `.env.example`: contoh konfigurasi environment.

@@ -1,12 +1,12 @@
 :root {
   --ink: #171717;
-  --muted: #60636b;
-  --paper: #f7f5ef;
+  --muted: #626874;
+  --paper: #f4f7fb;
   --surface: #ffffff;
-  --maroon: #8b0000;
-  --deep-red: #5e0000;
-  --green: #12633d;
-  --gold: #c7a24b;
+  --primary: #2563eb;
+  --primary-dark: #1e3a8a;
+  --accent: #f97316;
+  --mint: #14b8a6;
   --line: rgba(23, 23, 23, 0.14);
   --shadow: 0 18px 50px rgba(23, 23, 23, 0.12);
 }
@@ -24,7 +24,7 @@ body {
   color: var(--ink);
   font-family: "Sora", sans-serif;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(247, 245, 239, 0.88)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(244, 247, 251, 0.9)),
     var(--paper);
   overflow-x: hidden;
 }
@@ -81,13 +81,18 @@ code {
   font-weight: 800;
 }
 
-.brand img {
-  width: 52px;
-  height: 40px;
-  object-fit: contain;
+.brand-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 8px;
+  color: var(--surface);
+  font-weight: 900;
+  background: var(--primary);
 }
 
-.brand span {
+.brand span:last-child {
   white-space: nowrap;
 }
 
@@ -118,7 +123,7 @@ code {
 .nav-cta {
   color: var(--surface);
   font-weight: 800;
-  background: var(--green);
+  background: var(--primary);
 }
 
 .section {
@@ -140,14 +145,14 @@ code {
   width: fit-content;
   margin: 0 0 18px;
   padding: 8px 11px;
-  border: 1px solid rgba(18, 99, 61, 0.22);
+  border: 1px solid rgba(37, 99, 235, 0.22);
   border-radius: 6px;
-  color: var(--green);
+  color: var(--primary);
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
-  background: rgba(18, 99, 61, 0.08);
+  background: rgba(37, 99, 235, 0.08);
 }
 
 h1,
@@ -183,15 +188,15 @@ h3 {
 
 .accent-text {
   display: block;
-  color: var(--maroon);
+  color: var(--primary);
 }
 
 .hero-description,
 .section-content > p,
 .section-heading > p,
-.profile-card p,
-.deploy-band p,
-.deploy-list p,
+.portfolio-card p,
+.project-band p,
+.project-list p,
 .contact-card p {
   color: var(--muted);
   line-height: 1.8;
@@ -206,10 +211,10 @@ h3 {
   max-width: 690px;
   margin: 18px 0 0;
   padding: 14px 16px;
-  border: 1px solid rgba(139, 0, 0, 0.18);
-  border-left: 5px solid var(--maroon);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-left: 5px solid var(--primary);
   border-radius: 8px;
-  color: var(--deep-red);
+  color: var(--primary-dark);
   line-height: 1.7;
   background: rgba(255, 255, 255, 0.78);
 }
@@ -238,13 +243,13 @@ h3 {
 
 .button.primary {
   color: var(--surface);
-  background: var(--maroon);
-  box-shadow: 0 16px 32px rgba(139, 0, 0, 0.18);
+  background: var(--primary);
+  box-shadow: 0 16px 32px rgba(37, 99, 235, 0.18);
 }
 
 .button.secondary {
   color: var(--ink);
-  background: var(--gold);
+  background: var(--accent);
 }
 
 .metric-strip {
@@ -258,7 +263,7 @@ h3 {
   padding: 14px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.82);
 }
 
 .metric-strip strong,
@@ -268,7 +273,7 @@ h3 {
 
 .metric-strip strong {
   margin-bottom: 6px;
-  color: var(--deep-red);
+  color: var(--primary-dark);
   font-size: 1.34rem;
   letter-spacing: 0;
 }
@@ -279,79 +284,71 @@ h3 {
   line-height: 1.45;
 }
 
-.campus-visual {
-  position: relative;
-  overflow: hidden;
+.portfolio-visual {
+  display: grid;
   min-height: 520px;
-  border: 1px solid rgba(139, 0, 0, 0.18);
+  align-items: center;
+}
+
+.profile-preview {
+  display: grid;
+  gap: 22px;
+  padding: 28px;
+  border: 1px solid rgba(37, 99, 235, 0.16);
   border-radius: 8px;
   background: var(--surface);
   box-shadow: var(--shadow);
 }
 
-.campus-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 520px;
-  object-fit: cover;
-  object-position: 72% center;
-}
-
-.identity-panel,
-.location-panel {
-  position: absolute;
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  border-radius: 8px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
-}
-
-.identity-panel {
-  left: 20px;
-  bottom: 20px;
+.portrait-frame {
   display: grid;
-  grid-template-columns: 84px 1fr;
-  gap: 14px;
-  width: min(390px, calc(100% - 40px));
-  padding: 14px;
+  width: 180px;
+  height: 180px;
+  place-items: center;
+  border-radius: 8px;
   color: var(--surface);
-  background: rgba(94, 0, 0, 0.88);
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.94), rgba(20, 184, 166, 0.9)),
+    var(--primary);
 }
 
-.identity-panel img {
-  width: 84px;
-  height: 66px;
-  object-fit: contain;
-  border-radius: 6px;
-  background: var(--surface);
+.portrait-frame span {
+  font-family: "Fraunces", serif;
+  font-size: 4rem;
+  font-weight: 800;
 }
 
-.identity-panel p,
-.location-panel span {
-  margin-bottom: 4px;
-  color: rgba(255, 255, 255, 0.72);
+.preview-copy p {
+  margin-bottom: 8px;
+  color: var(--primary);
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
 }
 
-.identity-panel h2 {
-  margin: 0;
-  font-size: 1.8rem;
+.preview-copy h2 {
+  margin-bottom: 8px;
+  font-size: 2.3rem;
 }
 
-.location-panel {
-  top: 20px;
-  right: 20px;
+.preview-copy span,
+.preview-list span {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.preview-list {
   display: grid;
-  max-width: 285px;
-  padding: 14px;
-  color: var(--surface);
-  background: rgba(18, 99, 61, 0.9);
+  gap: 10px;
 }
 
-.location-panel strong {
-  line-height: 1.45;
+.preview-list div {
+  display: grid;
+  gap: 4px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(244, 247, 251, 0.8);
 }
 
 .split-section {
@@ -362,7 +359,7 @@ h3 {
 }
 
 .section-label {
-  color: var(--green);
+  color: var(--primary);
   font-weight: 900;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -378,7 +375,7 @@ h3 {
 }
 
 .info-grid,
-.profile-grid {
+.card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
@@ -389,47 +386,47 @@ h3 {
 }
 
 .info-grid article,
-.profile-card,
+.portfolio-card,
 .contact-card {
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.86);
   box-shadow: 0 16px 42px rgba(23, 23, 23, 0.07);
 }
 
 .info-grid article,
-.profile-card {
+.portfolio-card {
   padding: 22px;
 }
 
 .info-grid span,
-.profile-card span {
-  color: var(--maroon);
+.portfolio-card span {
+  color: var(--primary);
   font-weight: 900;
 }
 
-.profile-card {
+.portfolio-card {
   min-height: 260px;
 }
 
-.profile-card span {
+.portfolio-card span {
   display: inline-block;
   margin-bottom: 62px;
 }
 
-.profile-card.highlight {
+.portfolio-card.highlight {
   color: var(--surface);
   background:
-    linear-gradient(135deg, rgba(94, 0, 0, 0.96), rgba(18, 99, 61, 0.94)),
-    var(--maroon);
+    linear-gradient(135deg, rgba(30, 58, 138, 0.96), rgba(20, 184, 166, 0.94)),
+    var(--primary-dark);
 }
 
-.profile-card.highlight p,
-.profile-card.highlight span {
-  color: rgba(255, 255, 255, 0.78);
+.portfolio-card.highlight p,
+.portfolio-card.highlight span {
+  color: rgba(255, 255, 255, 0.82);
 }
 
-.deploy-band {
+.project-band {
   display: grid;
   grid-template-columns: 0.82fr 1.18fr;
   gap: 34px;
@@ -437,26 +434,26 @@ h3 {
   border-radius: 8px;
   color: var(--surface);
   background:
-    linear-gradient(135deg, rgba(139, 0, 0, 0.96), rgba(94, 0, 0, 0.96) 46%, rgba(18, 99, 61, 0.94)),
-    var(--maroon);
+    linear-gradient(135deg, rgba(30, 58, 138, 0.96), rgba(37, 99, 235, 0.94) 52%, rgba(20, 184, 166, 0.9)),
+    var(--primary-dark);
 }
 
-.deploy-band .eyebrow {
+.project-band .eyebrow {
   color: var(--ink);
-  background: var(--gold);
+  background: var(--accent);
   border-color: rgba(255, 255, 255, 0.22);
 }
 
-.deploy-band p {
-  color: rgba(255, 255, 255, 0.76);
+.project-band p {
+  color: rgba(255, 255, 255, 0.78);
 }
 
-.deploy-list {
+.project-list {
   display: grid;
   gap: 12px;
 }
 
-.deploy-list div {
+.project-list div {
   display: grid;
   grid-template-columns: 48px 1fr;
   gap: 8px 16px;
@@ -466,13 +463,13 @@ h3 {
   background: rgba(255, 255, 255, 0.08);
 }
 
-.deploy-list span {
+.project-list span {
   grid-row: span 2;
-  color: var(--gold);
+  color: var(--accent);
   font-weight: 900;
 }
 
-.deploy-list p {
+.project-list p {
   grid-column: 2;
   margin-bottom: 0;
 }
@@ -486,12 +483,53 @@ h3 {
 .checklist div {
   min-height: 126px;
   padding: 18px;
-  border: 1px solid rgba(18, 99, 61, 0.16);
+  border: 1px solid rgba(37, 99, 235, 0.16);
   border-radius: 8px;
-  color: var(--green);
+  color: var(--primary-dark);
   font-weight: 800;
   line-height: 1.55;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.chatbot-info-section {
+  padding-top: 40px;
+}
+
+.chatbot-info-card {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 34px;
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.chatbot-info-card h2 {
+  font-size: 2.7rem;
+}
+
+.chatbot-info-card p:not(.eyebrow) {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.chatbot-feature-list {
+  display: grid;
+  gap: 10px;
+}
+
+.chatbot-feature-list div {
+  padding: 13px 14px;
+  border: 1px solid rgba(37, 99, 235, 0.14);
+  border-radius: 8px;
+  color: var(--primary-dark);
+  font-weight: 800;
+  line-height: 1.5;
+  background: rgba(244, 247, 251, 0.92);
 }
 
 .contact-section {
@@ -513,7 +551,7 @@ h3 {
   border-radius: 6px;
   color: var(--surface);
   font-weight: 800;
-  background: var(--deep-red);
+  background: var(--primary-dark);
 }
 
 .chatbot {
@@ -532,8 +570,8 @@ h3 {
   padding: 10px 16px 10px 10px;
   color: var(--surface);
   cursor: pointer;
-  background: var(--deep-red);
-  box-shadow: 0 18px 44px rgba(94, 0, 0, 0.24);
+  background: var(--primary-dark);
+  box-shadow: 0 18px 44px rgba(30, 58, 138, 0.24);
 }
 
 .chat-toggle span {
@@ -544,7 +582,7 @@ h3 {
   border-radius: 50%;
   color: var(--ink);
   font-weight: 900;
-  background: var(--gold);
+  background: var(--accent);
 }
 
 .chat-panel {
@@ -625,7 +663,7 @@ h3 {
 .message.user {
   align-self: flex-end;
   color: var(--surface);
-  background: var(--green);
+  background: var(--primary);
 }
 
 .message.loading {
@@ -652,7 +690,7 @@ h3 {
 }
 
 .chat-form input:focus {
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 .chat-form button {
@@ -662,7 +700,7 @@ h3 {
   color: var(--ink);
   cursor: pointer;
   font-weight: 900;
-  background: var(--gold);
+  background: var(--accent);
 }
 
 .reveal {
@@ -693,7 +731,7 @@ h3 {
 
   .hero,
   .split-section,
-  .deploy-band {
+  .project-band {
     grid-template-columns: 1fr;
   }
 
@@ -709,15 +747,18 @@ h3 {
     font-size: 3rem;
   }
 
-  .campus-visual,
-  .campus-image {
-    min-height: 450px;
+  .portfolio-visual {
+    min-height: auto;
   }
 
   .info-grid,
-  .profile-grid,
+  .card-grid,
   .checklist {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .chatbot-info-card {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -731,12 +772,12 @@ h3 {
     width: calc(100% - 24px);
   }
 
-  .brand img {
-    width: 44px;
-    height: 34px;
+  .brand-mark {
+    width: 38px;
+    height: 38px;
   }
 
-  .brand span {
+  .brand span:last-child {
     font-size: 0.9rem;
   }
 
@@ -754,43 +795,29 @@ h3 {
 
   .metric-strip div,
   .info-grid,
-  .profile-grid,
+  .card-grid,
   .checklist {
     width: 100%;
     grid-template-columns: 1fr;
   }
 
-  .campus-visual,
-  .campus-image {
-    min-height: 410px;
+  .portrait-frame {
+    width: 150px;
+    height: 150px;
   }
 
-  .identity-panel {
-    grid-template-columns: 1fr;
-  }
-
-  .identity-panel img {
-    width: 104px;
-  }
-
-  .location-panel {
-    top: 12px;
-    right: 12px;
-    left: 12px;
-    max-width: none;
-  }
-
-  .deploy-band,
+  .project-band,
+  .chatbot-info-card,
   .contact-card {
     padding: 26px;
   }
 
-  .deploy-list div {
+  .project-list div {
     grid-template-columns: 1fr;
   }
 
-  .deploy-list span,
-  .deploy-list p {
+  .project-list span,
+  .project-list p {
     grid-column: auto;
   }
 
